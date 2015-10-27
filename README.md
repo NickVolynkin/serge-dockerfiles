@@ -1,7 +1,7 @@
 Serge Docker Container
 ======================
 
-Run [Serge continuous localziation tool](http://serge.io/) inside a Docker container. This allows you to keep all Serge dependencies isolated from your host system and upgrade Serge easily.
+Run [Serge continuous localization tool](http://serge.io/) inside a Docker container. This allows you to keep all Serge dependencies isolated from your host system and upgrade Serge easily.
 
 Building the Image
 ------------------
@@ -46,6 +46,7 @@ And then run it like that:
     docker run -d --name="serge-container" -v /var/serge:/var/serge -v /var/serge/lib:/usr/lib/serge/vendor/lib:ro serge:latest
 
 This command does the following:
+
 1. Instructs Docker to use the latest successful build of the image (`serge:latest`)
 2. Exposes `/var/serge` contents on your host machine as `/var/serge` volume in the container it is about to run (`-v /var/serge:/var/serge`)
 3. Exposes `/var/serge/lib` contents on your host machine as `/usr/lib/serge/vendor/lib` volume in the container in read-only mode (`-v /var/serge/lib:/usr/lib/serge/vendor/lib:ro`)
